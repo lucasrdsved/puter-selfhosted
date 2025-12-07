@@ -52,7 +52,7 @@
     "dev": "npm run build:ts && DEVCONSOLE=1 node ./tools/run-selfhosted.js",
     "build": "npx eslint --quiet -c eslint/mandatory.eslint.config.js src/backend/src extensions && npm run build:ts && cd src/gui && node ./build.js",
     "check-translations": "node tools/check-translations.js",
-    "prepare": "husky",
+    "prepare": "husky || true",
     "build:ts": "tsc",
     "gen": "./scripts/gen.sh"
   },
