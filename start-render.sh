@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 # Create config directory if it doesn't exist
-mkdir -p /opt/render/project/src/volatile/config
+mkdir -p ./volatile/config
 
 # Create production config
-cat > /opt/render/project/src/volatile/config/config.json << 'EOF'
+cat > ./volatile/config/config.json << 'EOF'
 {
     "config_name": "render production",
     "env": "production",
@@ -19,7 +19,7 @@ cat > /opt/render/project/src/volatile/config/config.json << 'EOF'
     "services": {
         "database": {
             "engine": "sqlite",
-            "path": "/opt/render/project/src/volatile/runtime/puter-database.sqlite"
+            "path": "./volatile/runtime/puter-database.sqlite"
         },
         "thumbnails": {
             "engine": "purejs"
