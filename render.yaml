@@ -6,7 +6,7 @@ services:
     plan: free
     branch: main
     buildCommand: npm install
-    startCommand: bash start-render.sh
+    startCommand: sh start-render.sh
     envVars:
       - key: NODE_ENV
         value: production
